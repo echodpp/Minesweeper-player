@@ -1,7 +1,7 @@
 # Minesweeper-player
 We design and implement an algorithm to play minesweeper automatically. The rule of the game is shown as follows:  
 
-1.The game is played on a board containing **nxn** cells, each cell as a possibility of being a mine or a safe block.  
+1. The game is played on a board containing **nxn** cells, each cell as a possibility of being a mine or a safe block.  
 
 2. All the blocks are covered initallily, every time the player should select a block to be revealed.  
  
