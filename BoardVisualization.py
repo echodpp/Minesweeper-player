@@ -35,7 +35,7 @@ class Mines(tk.Frame):
                             text=str(cell_value), bg="white"
                         )
                 elif self.env.hidden_board[i][j] == -1:
-                    self.label_matrix[i][j].configure(text="M", bg="red")
+                    self.label_matrix[i][j].configure(text="M", bg="blue")
         if score != -1:
             print(score)
         else:
@@ -66,6 +66,14 @@ class Mines(tk.Frame):
         self.reset_button = tk.Button(
             frame2, text="reset", width=6, height=1, command=self.click_reset
         )
+        self.mark_button = tk.Label(
+            frame2, text="M means mark", bg="Blue", width=10, height=1
+        )
+        self.mark1_button = tk.Label(
+            frame2, text="B means Boom", bg="Red", width=10, height=1
+        )
+        self.mark_button.pack()
+        self.mark1_button.pack()
         self.next_button.pack()
         self.reset_button.pack()
         frame2.pack()
