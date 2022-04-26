@@ -51,14 +51,10 @@ class Environment(object):
         (x, y) = mine_node
         self.hidden_board[x][y] = -1
 
-    def respond_query(self, i: int, j: int, mark_mine_action=0) -> int:
-
-        if mark_mine_action == 1:
-            self.mark_mine((i, j))
-            return False
-        else:
+    def respond_query(self, i: int, j: int) -> int:
+        if self.board[i][j] == -1:
             self.uncover((i, j))
-            if self.board[i][j] == -1:
-                return False
-            else:
-                return True
+            return False
+        self.uncover((i, j))
+
+        return self.board[i][j]
