@@ -4,7 +4,7 @@ from Agent import *
 
 
 class Mines(tk.Frame):
-    def __init__(self, oir_env:Environment, ag:Agent)->None:
+    def __init__(self, oir_env: Environment, ag: Agent) -> None:
         tk.Frame.__init__(self)
         self.master.title("Minesweeper")
         # self.master.resizable(False, False)
@@ -36,8 +36,6 @@ class Mines(tk.Frame):
                         )
                 elif self.env.hidden_board[i][j] == -1:
                     self.label_matrix[i][j].configure(text="M", bg="red")
-                elif self.env.hidden_board[i][j] == 2:
-                    self.label_matrix[i][j].configure(text="C", bg="green")
         if score != -1:
             print(score)
         else:
