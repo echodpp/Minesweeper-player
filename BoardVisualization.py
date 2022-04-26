@@ -64,7 +64,7 @@ class Mines(tk.Frame):
             frame2, text="next", width=6, height=1, command=self.click_next
         )
         self.reset_button = tk.Button(
-            frame2, text="reset", width=6, height=1, command=self.click_reset
+            frame2, text="Finish", width=6, height=1, command=self.click_reset
         )
         self.mark_button = tk.Label(
             frame2, text="M means mark", bg="Blue", width=10, height=1
