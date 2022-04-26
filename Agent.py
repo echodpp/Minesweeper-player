@@ -4,9 +4,6 @@ import random
 import queue
 from itertools import combinations
 
-# from Tree import *
-
-
 class Agent(object):
     def __init__(self, env, num_of_mine):
         self.env = env
@@ -68,7 +65,7 @@ class Agent(object):
                                 self.num_cell_left -= 1
 
             else:
-                # How to pick x and y here is uncertain!!!
+                # Randomly pick x and y
                 uncover_nodes_list = []
                 for i in range(self.env.dim):
                     for j in range(self.env.dim):
@@ -89,3 +86,4 @@ class Agent(object):
         self.env = env
         self.score = 0
         self.kb = [[9 for col in range(self.env.dim)] for row in range(self.env.dim)]
+
