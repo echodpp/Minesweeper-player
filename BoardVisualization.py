@@ -14,7 +14,7 @@ class Mines(tk.Frame):
         self.agent = ag
         self.init_step()
 
-    def click_reset(self):
+    def click_reset(self) -> None:
         self.env.new_game()
         self.agent.reset_agent(self.env)
         for i in range(self.env.dim):
@@ -39,7 +39,7 @@ class Mines(tk.Frame):
         if score != -1:
             print(score)
         else:
-            print("you finished the game")
+            print("You finished the game")
 
     def init_step(self):
         frame1 = tk.Frame(bg="black")
