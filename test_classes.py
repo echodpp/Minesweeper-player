@@ -1,8 +1,6 @@
 import pytest
 from Agent import Agent
-
 from Environment import Environment
-
 from BroadVisualzation import Mines
 
 
