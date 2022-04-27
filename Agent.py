@@ -63,7 +63,6 @@ class Agent(object):
                                     deepcopy((x + i, y + j))
                                 )
                                 self.num_cell_left -= 1
-
             else:
                 # Randomly pick x and y
                 uncover_nodes_list = []
@@ -86,4 +85,3 @@ class Agent(object):
         self.env = env
         self.score = 0
         self.kb = [[9 for col in range(self.env.dim)] for row in range(self.env.dim)]
-
